@@ -1,0 +1,64 @@
+.chapter-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-fast);
+}
+
+.chapter-item:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent-primary);
+    color: var(--text-primary);
+}
+
+.chapter-item-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.chapter-item-number {
+    font-weight: 600;
+    font-size: 0.9375rem;
+}
+
+.chapter-item-title {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.chapter-item-new {
+    background: var(--accent-gradient);
+    color: var(--text-primary);
+    font-size: 0.625rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.chapter-item-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.chapter-item-date {
+    color: var(--text-muted);
+    font-size: 0.8125rem;
+}
+
+.chapter-item-arrow {
+    width: 20px;
+    height: 20px;
+    color: var(--text-muted);
+    transition: color var(--transition-fast);
+}
+
+.chapter-item:hover .chapter-item-arrow {
+    color: var(--accent-primary);
+}

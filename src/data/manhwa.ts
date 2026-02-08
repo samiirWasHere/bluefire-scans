@@ -229,3 +229,10 @@ export function getFeaturedManhwa(): Manhwa {
 export function getRecommendations(currentId: string): Manhwa[] {
     return manhwaData.filter(m => m.id !== currentId).slice(0, 3);
 }
+
+export function getCarouselManhwa(): Manhwa[] {
+    // Return manhwas with banner images first, then fill with others
+    const withBanners = manhwaData.filter(m => m.bannerImage);
+    const withoutBanners = manhwaData.filter(m => !m.bannerImage);
+    return [...withBanners, ...withoutBanners].slice(0, 6);
+}

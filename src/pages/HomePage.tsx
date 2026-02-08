@@ -1,17 +1,17 @@
 import { Link } from 'react-router-dom';
-import { HeroSection } from '../components/HeroSection';
+import { HeroCarousel } from '../components/HeroCarousel';
 import { ManhwaCard } from '../components/ManhwaCard';
-import { getLatestUpdates, getPopularSeries, getFeaturedManhwa } from '../data/manhwa';
+import { getLatestUpdates, getPopularSeries, getCarouselManhwa } from '../data/manhwa';
 import './HomePage.css';
 
 export function HomePage() {
-    const featuredManhwa = getFeaturedManhwa();
+    const carouselManhwa = getCarouselManhwa();
     const latestUpdates = getLatestUpdates();
     const popularSeries = getPopularSeries();
 
     return (
         <main className="home-page">
-            <HeroSection manhwa={featuredManhwa} />
+            <HeroCarousel items={carouselManhwa} />
 
             <div className="container">
                 {/* Latest Updates Section */}

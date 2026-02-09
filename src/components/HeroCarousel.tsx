@@ -29,7 +29,7 @@ export function HeroCarousel({ items }: HeroCarouselProps) {
 
         const interval = setInterval(() => {
             goToNext();
-        }, 5000);
+        }, 3500);
 
         return () => clearInterval(interval);
     }, [isAutoPlaying, goToNext]);
@@ -55,26 +55,22 @@ export function HeroCarousel({ items }: HeroCarouselProps) {
             />
 
             {/* Main content */}
-            <div className="hero-carousel-content">
+            <div
+                className="hero-carousel-content"
+            >
                 {/* Previous slide preview */}
-                <button
-                    className="carousel-nav-btn carousel-prev"
-                    onClick={goToPrevious}
-                    aria-label="Previous slide"
-                >
-                    <div className="carousel-preview">
-                        <img
-                            src={items[(currentIndex - 1 + items.length) % items.length].coverImage}
-                            alt="Previous"
-                        />
-                    </div>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M15 18l-6-6 6-6" />
-                    </svg>
-                </button>
+                <div className="carousel-preview" onClick={goToPrevious}>
+                    <img
+                        src={items[(currentIndex - 1 + items.length) % items.length].coverImage}
+                        alt="Previous"
+                    />
+                </div>
 
                 {/* Center slide */}
-                <Link to={`/series/${currentItem.id}`} className="carousel-main-slide">
+                <Link
+                    to={`/series/${currentItem.id}`}
+                    className="carousel-main-slide"
+                >
                     <div className="carousel-slide-image">
                         <img
                             src={currentItem.bannerImage || currentItem.coverImage}
@@ -96,21 +92,12 @@ export function HeroCarousel({ items }: HeroCarouselProps) {
                 </Link>
 
                 {/* Next slide preview */}
-                <button
-                    className="carousel-nav-btn carousel-next"
-                    onClick={goToNext}
-                    aria-label="Next slide"
-                >
-                    <div className="carousel-preview">
-                        <img
-                            src={items[(currentIndex + 1) % items.length].coverImage}
-                            alt="Next"
-                        />
-                    </div>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M9 18l6-6-6-6" />
-                    </svg>
-                </button>
+                <div className="carousel-preview" onClick={goToNext}>
+                    <img
+                        src={items[(currentIndex + 1) % items.length].coverImage}
+                        alt="Next"
+                    />
+                </div>
             </div>
 
             {/* Pagination dots */}

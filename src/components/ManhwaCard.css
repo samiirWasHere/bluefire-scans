@@ -76,10 +76,23 @@
     justify-content: space-between;
     align-items: center;
     font-size: 0.75rem;
+    padding: 4px 6px;
+    margin: 0 -6px;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-fast);
+}
+
+.chapter-row:hover {
+    background: var(--bg-tertiary);
+}
+
+.chapter-row:hover .chapter-number {
+    color: var(--accent-primary);
 }
 
 .chapter-number {
     color: var(--text-secondary);
+    transition: color var(--transition-fast);
 }
 
 .chapter-time {

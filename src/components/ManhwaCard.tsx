@@ -11,24 +11,30 @@ export function ManhwaCard({ manhwa, showChapters = true }: ManhwaCardProps) {
     const latestChapters = manhwa.chapters.slice(0, 2);
 
     return (
-        <Link to={`/series/${manhwa.id}`} className="manhwa-card">
-            <div className="manhwa-card-cover">
+        <div className="manhwa-card">
+            <Link to={`/series/${manhwa.id}`} className="manhwa-card-cover">
                 <img src={manhwa.coverImage} alt={manhwa.title} />
                 {manhwa.chapters[0]?.isNew && <span className="new-badge">NEW</span>}
-            </div>
+            </Link>
             <div className="manhwa-card-info">
-                <h3 className="manhwa-card-title">{manhwa.title}</h3>
+                <Link to={`/series/${manhwa.id}`} className="manhwa-card-title">
+                    {manhwa.title}
+                </Link>
                 {showChapters && (
                     <div className="manhwa-card-chapters">
                         {latestChapters.map(chapter => (
-                            <div key={chapter.id} className="chapter-row">
+                            <Link
+                                key={chapter.id}
+                                to={`/series/${manhwa.id}/chapter/${chapter.number}`}
+                                className="chapter-row"
+                            >
                                 <span className="chapter-number">Ch. {chapter.number}</span>
                                 <span className="chapter-time">{chapter.releaseDate}</span>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 )}
             </div>
-        </Link>
+        </div>
     );
 }

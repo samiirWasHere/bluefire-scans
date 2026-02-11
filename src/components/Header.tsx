@@ -14,7 +14,6 @@ export function Header() {
         { path: '/', label: 'Home' },
         { path: '/series', label: 'Series' },
         { path: '/bookmarks', label: 'Bookmarks' },
-        { path: '/community', label: 'Community' },
     ];
 
     return (

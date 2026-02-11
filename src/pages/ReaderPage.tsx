@@ -139,23 +139,13 @@ export function ReaderPage() {
 
                     <div className="comments-list">
                         <div className="comment">
-                            <div className="comment-avatar">U</div>
-                            <div className="comment-content">
-                                <div className="comment-header">
-                                    <span className="comment-author">User123</span>
-                                    <span className="comment-time">2 hours ago</span>
-                                </div>
-                                <p className="comment-text">That cliffhanger is illegal! I need the next chapter right now 😭</p>
-                            </div>
-                        </div>
-                        <div className="comment">
                             <div className="comment-avatar">M</div>
                             <div className="comment-content">
                                 <div className="comment-header">
-                                    <span className="comment-author">ManhwaFan</span>
+                                    <span className="comment-author">Sameer</span>
                                     <span className="comment-time">3 hours ago</span>
                                 </div>
-                                <p className="comment-text">The art style in this chapter went absolutely crazy. Best chapter yet!</p>
+                                <p className="comment-text">Amazing</p>
                             </div>
                         </div>
                     </div>

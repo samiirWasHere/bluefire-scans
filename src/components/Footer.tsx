@@ -7,10 +7,9 @@ export function Footer() {
             <div className="footer-container">
                 <div className="footer-brand">
                     <Link to="/" className="footer-logo">
-                        <span className="logo-icon">🔥</span>
-                        <span className="logo-text">BlueFireScans</span>
+                        <span className="logo-text">RevivalScans</span>
                     </Link>
-                    <p className="footer-tagline">Premium manhwa translations delivered with passion.</p>
+                    <p className="footer-tagline">We are Revival Scans. Enjoy your stay and Happy Reading!</p>
                 </div>
 
                 <div className="footer-links">
@@ -23,7 +22,7 @@ export function Footer() {
                 </div>
 
                 <div className="footer-copyright">
-                    © {new Date().getFullYear()} BlueFireScans. All rights reserved.
+                    © {new Date().getFullYear()} RevivalScans. All rights reserved.
                 </div>
             </div>
         </footer>

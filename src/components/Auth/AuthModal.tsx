@@ -165,7 +165,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
                     </h2>
                     <p className="auth-modal-subtitle">
                         {view === 'signin' && 'Sign in to access your bookmarks and reading history'}
-                        {view === 'signup' && 'Join BlueFireScans to track your favorite manhwa'}
+                        {view === 'signup' && 'Join RevivalScans to track your favorite manhwa'}
                         {view === 'forgot' && 'Enter your email to receive a reset link'}
                     </p>
                 </div>

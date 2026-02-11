@@ -22,8 +22,7 @@ export function Header() {
             <header className="header">
                 <div className="header-container">
                     <Link to="/" className="logo">
-                        <span className="logo-icon">🔥</span>
-                        <span className="logo-text">BlueFireScans</span>
+                        <span className="logo-text">RevivalScans</span>
                     </Link>
 
                     <nav className="nav">
@@ -44,7 +43,7 @@ export function Header() {
                                 <circle cx="11" cy="11" r="8" />
                                 <path d="M21 21l-4.35-4.35" />
                             </svg>
-                            <input type="text" placeholder="Search manhwa..." />
+                            <input type="text" placeholder="Search" />
                         </div>
 
                         <a

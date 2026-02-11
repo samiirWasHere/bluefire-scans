@@ -14,7 +14,14 @@ export function ManhwaCard({ manhwa, showChapters = true }: ManhwaCardProps) {
         <div className="manhwa-card">
             <Link to={`/series/${manhwa.id}`} className="manhwa-card-cover">
                 <img src={manhwa.coverImage} alt={manhwa.title} />
+                {/* Status tag overlay */}
+                <div className="card-tags">
+                    <span className={`card-tag card-tag-status card-tag-${manhwa.status.toLowerCase()}`}>
+                        {manhwa.status}
+                    </span>
+                </div>
                 {manhwa.chapters[0]?.isNew && <span className="new-badge">NEW</span>}
+                <div className="card-cover-glare" />
             </Link>
             <div className="manhwa-card-info">
                 <Link to={`/series/${manhwa.id}`} className="manhwa-card-title">

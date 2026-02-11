@@ -1,5 +1,4 @@
 import { useParams, Link } from 'react-router-dom';
-import { GenreTag } from '../components/GenreTag';
 import { ChapterListItem } from '../components/ChapterListItem';
 import { ManhwaCard } from '../components/ManhwaCard';
 import { getManhwaById, getRecommendations } from '../data/manhwa';
@@ -59,11 +58,6 @@ export function SeriesDetailPage() {
                             <p className="series-alt-title">{manhwa.koreanTitle}</p>
                         )}
 
-                        <div className="series-genres">
-                            {manhwa.genres.map(genre => (
-                                <GenreTag key={genre} genre={genre} />
-                            ))}
-                        </div>
 
                         <div className="series-meta">
                             <div className="meta-item">

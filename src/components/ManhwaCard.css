@@ -32,6 +32,54 @@
     transform: scale(1.05);
 }
 
+/* Card status tags */
+.card-tags {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    display: flex;
+    gap: 4px;
+    z-index: 2;
+}
+
+.card-tag {
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.card-tag-status.card-tag-completed {
+    background: #f59e0b;
+    color: #000;
+}
+
+.card-tag-status.card-tag-ongoing {
+    background: #22c55e;
+    color: #000;
+}
+
+.card-tag-status.card-tag-hiatus {
+    background: #ef4444;
+    color: white;
+}
+
+/* Card glare */
+.card-cover-glare {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0.03) 25%,
+            transparent 50%,
+            transparent 75%,
+            rgba(255, 255, 255, 0.05) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
 .new-badge {
     position: absolute;
     top: 8px;
@@ -44,6 +92,7 @@
     border-radius: 4px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    z-index: 2;
 }
 
 .manhwa-card-info {
